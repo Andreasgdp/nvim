@@ -19,6 +19,8 @@ vim.keymap.set("n", "<leader>svwm", function()
 end)
 
 -- greatest remap ever
+-- remap to allow copy/paste from clipboard
+vim.keymap.set("v", "<leader>y", [["+y]])
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
@@ -48,4 +50,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
 
