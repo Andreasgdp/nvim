@@ -1,5 +1,3 @@
--- TODO: make neo-tree target the current selected open file pr. default for easier navigation
--- TODO: also create shortcut to open/select(if open) file on file tree on selected buffer(file)
 return {
   'nvim-neo-tree/neo-tree.nvim',
   branch = 'v3.x',
