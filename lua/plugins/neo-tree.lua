@@ -1,3 +1,4 @@
+-- TODO: Make it so the tree always shows from the root of the project
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
@@ -11,9 +12,6 @@ return {
         event = "file_opened",
         ---@diagnostic disable-next-line: unused-local
         handler = function(file_path)
-          -- auto close
-          -- vimc.cmd("Neotree close")
-          -- OR
           require("neo-tree.command").execute({ action = "close" })
         end,
       },
