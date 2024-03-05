@@ -1,4 +1,3 @@
--- TODO: Make it so the tree always shows from the root of the project
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
