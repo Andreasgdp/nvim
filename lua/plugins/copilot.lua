@@ -3,6 +3,7 @@ return {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     build = ":Copilot auth",
+    event = "BufRead",
     opts = {
       panel = {
         enabled = true,
@@ -21,9 +22,10 @@ return {
       },
       suggestion = {
         enabled = true,
-        auto_trigger = false,
+        auto_trigger = true,
         debounce = 75,
         keymap = {
+          -- Reminder <M> is alt key
           accept = "<M-l>",
           accept_word = false,
           accept_line = false,
