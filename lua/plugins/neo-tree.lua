@@ -5,9 +5,9 @@ return {
     window = {
       close_if_last_window = true,
       position = "right",
+      width = 60,
     },
     event_handlers = {
-
       {
         event = "file_opened",
         ---@diagnostic disable-next-line: unused-local
