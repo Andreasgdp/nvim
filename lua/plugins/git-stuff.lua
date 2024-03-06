@@ -11,5 +11,3 @@ return {
     end,
   },
 }
-
--- this is a test to show changes of this plugin
