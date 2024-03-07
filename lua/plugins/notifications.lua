@@ -5,6 +5,6 @@ return {
     stages = "fade_in_slide_out",
     render = "compact",
     fps = 60,
-    timeout = 2,
+    timeout = 2500,
   },
 }
