@@ -23,3 +23,12 @@ map("n", "<C-p>", Util.telescope("files"), { desc = "Telescope Files", remap = t
 
 -- Open command-line window with ":Git " pre-filled
 map("n", "<leader>g<leader>", ":Git ", { desc = "Git" })
+
+vim.keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
+
+-- Make Ctrl+C equivalent to Esc in insert mode (https://vi.stackexchange.com/a/25765)
+map("i", "<C-c>", "<Esc>", { desc = "Ctrl+C to Esc" })
