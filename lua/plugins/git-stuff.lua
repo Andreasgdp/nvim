@@ -7,13 +7,11 @@ return {
     config = function()
       require("gitsigns").setup()
       vim.keymap.set("n", "<leader>gt", ":Gitsigns preview_hunk_inline<CR>", {})
-      vim.keymap.set("n", "<leader>ghs", ":Gitsigns stage_hunk<CR>", {})
-      vim.keymap.set("n", "<leader>ghu", ":Gitsigns undo_stage_hunk<CR>", {})
-      vim.keymap.set("n", "<leader>ghr", ":Gitsigns reset_hunk<CR>", {})
-      vim.keymap.set("n", "<leader>gbr", ":Gitsigns reset_buffer<CR>", {})
-      vim.keymap.set("n", "<leader>gbs", ":Gitsigns stage_buffer<CR>", {})
+      vim.keymap.set("n", "<leader>gu", ":Gitsigns undo_stage_hunk<CR>", {})
+      vim.keymap.set("n", "<leader>gsh", ":Gitsigns stage_hunk<CR>", {})
+      vim.keymap.set("n", "<leader>grh", ":Gitsigns reset_hunk<CR>", {})
+      vim.keymap.set("n", "<leader>gsb", ":Gitsigns stage_buffer<CR>", {})
+      vim.keymap.set("n", "<leader>grb", ":Gitsigns reset_buffer<CR>", {})
     end,
   },
 }
-
---
