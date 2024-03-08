@@ -6,9 +6,17 @@
 vim.api.nvim_create_autocmd({ "BufReadPost" }, {
   once = true,
   callback = function()
-    -- vim.cmd("Gitsigns toggle_current_line_blame")
     vim.defer_fn(function()
       vim.cmd("Gitsigns toggle_current_line_blame")
+    end, 100)
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+  callback = function()
+    Util = require("lazyvim.util")
+    vim.defer_fn(function()
+      Util.toggle("wrap")
     end, 100)
   end,
 })
