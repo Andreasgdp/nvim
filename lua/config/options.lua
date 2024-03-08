@@ -7,3 +7,4 @@ local opt = vim.opt
 -- ensure that the file tree always is based on the root of where nvim was started
 vim.g.root_spec = {}
 opt.autochdir = false
+opt.wrap = true

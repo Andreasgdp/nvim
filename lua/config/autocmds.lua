@@ -12,15 +12,6 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufReadPost" }, {
-  callback = function()
-    Util = require("lazyvim.util")
-    vim.defer_fn(function()
-      Util.toggle("wrap")
-    end, 100)
-  end,
-})
-
 -- When going into normal mode from insert mode, run copilot#Dismiss()
 vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   callback = function()
