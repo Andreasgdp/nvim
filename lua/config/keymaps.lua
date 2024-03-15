@@ -38,7 +38,7 @@ map("n", "<leader>gP", ":Neogit push<CR>", { silent = true, noremap = true, desc
 map("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true, noremap = true, desc = "Search branches" })
 -- blame
 map("n", "<leader>gB", ":G blame<CR>", { silent = true, noremap = true, desc = "Neogit Blame" })
-
+-- gitsigns preview hunk
 map("n", "<leader>gd", ":Gitsigns preview_hunk_inline<CR>", { desc = "Preview hunk" })
 -- ---------GIT---------
 
