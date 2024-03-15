@@ -50,3 +50,6 @@ vim.g.copilot_no_tab_map = true
 
 -- Make Ctrl+C equivalent to Esc in insert mode (https://vi.stackexchange.com/a/25765)
 map("i", "<C-c>", "<Esc>", { desc = "Ctrl+C to Esc" })
+
+map("n", "<A-S-j>", ":t .<CR>", { desc = "Copy line down" })
+map("n", "<A-S-k>", ":t .-1<CR>", { desc = "Copy line up" })
