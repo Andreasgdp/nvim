@@ -53,3 +53,7 @@ map("i", "<C-c>", "<Esc>", { desc = "Ctrl+C to Esc" })
 
 map("n", "<A-S-j>", ":t .<CR>", { desc = "Copy line down" })
 map("n", "<A-S-k>", ":t .-1<CR>", { desc = "Copy line up" })
+
+-- enable ctrl+backspace to delete word in insert mode (NOTE: <C-BS> maybe only work on vim gui apps... if you use vim terminal, <C-BS> normally don't work.)
+-- https://www.reddit.com/r/neovim/comments/okbag3/comment/h57auji/?utm_source=share&utm_medium=web2x&context=3
+map("i", "<C-H>", "<C-w>", { desc = "Ctrl+Backspace to delete word", silent = true, noremap = true })
