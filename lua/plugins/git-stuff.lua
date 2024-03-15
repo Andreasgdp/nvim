@@ -7,8 +7,6 @@ return {
     config = function()
       require("gitsigns").setup()
       vim.keymap.set("n", "<leader>gd", ":Gitsigns preview_hunk_inline<CR>", { desc = "Preview hunk" })
-      vim.keymap.set("n", "<leader>gu", ":Gitsigns undo_stage_hunk<CR>", { desc = "Undo last stage" })
-      vim.keymap.set("n", "<leader>gs", ":Gitsigns stage_hunk<CR>", { desc = "Stage current hunk" })
       vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", { desc = "Reset current hunk" })
       vim.keymap.set(
         "n",
@@ -23,5 +21,13 @@ return {
         { desc = "Reset buffer i.e. selected open file" }
       )
     end,
+  },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+    },
+    config = true,
   },
 }

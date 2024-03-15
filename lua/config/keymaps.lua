@@ -20,9 +20,25 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<C-p>", Util.telescope("files"), { desc = "Telescope Files", remap = true })
-
+-- ---------GIT---------
 -- Open command-line window with ":Git " pre-filled
 map("n", "<leader>g<leader>", ":Git ", { desc = "Git" })
+
+local neogit = require("neogit")
+
+-- status
+map("n", "<leader>gs", neogit.open, { silent = true, noremap = true, desc = "Neogit Status" })
+-- commit
+map("n", "<leader>gc", ":Neogit commit<CR>", { silent = true, noremap = true, desc = "Neogit Commit" })
+-- pull
+map("n", "<leader>gp", ":Neogit pull<CR>", { silent = true, noremap = true, desc = "Neogit Pull" })
+-- push
+map("n", "<leader>gP", ":Neogit push<CR>", { silent = true, noremap = true, desc = "Neogit Push" })
+-- branches
+map("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true, noremap = true, desc = "Search branches" })
+-- blame
+map("n", "<leader>gB", ":G blame<CR>", { silent = true, noremap = true, desc = "Neogit Blame" })
+-- ---------GIT---------
 
 vim.keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
   expr = true,
