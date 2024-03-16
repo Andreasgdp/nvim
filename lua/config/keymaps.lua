@@ -38,8 +38,14 @@ map("n", "<leader>gP", ":Neogit push<CR>", { silent = true, noremap = true, desc
 map("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true, noremap = true, desc = "Search branches" })
 -- blame
 map("n", "<leader>gB", ":G blame<CR>", { silent = true, noremap = true, desc = "Neogit Blame" })
--- gitsigns preview hunk
-map("n", "<leader>gd", ":Gitsigns preview_hunk_inline<CR>", { desc = "Preview hunk" })
+-- diffview toggle (:DiffviewOpen, :DiffviewClose depending on state)
+map("n", "<leader>gd", function()
+  if next(require("diffview.lib").views) == nil then
+    vim.cmd("DiffviewOpen")
+  else
+    vim.cmd("DiffviewClose")
+  end
+end, { silent = true, noremap = true, desc = "Neogit Diff" })
 -- ---------GIT---------
 
 vim.keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
