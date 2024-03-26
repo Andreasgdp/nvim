@@ -66,3 +66,6 @@ map("i", "<C-H>", "<C-w>", { desc = "Ctrl+Backspace to delete word", silent = tr
 
 -- map ctrl+q to increment number under cursor as ctrl+a is mapped in tmux as prefix
 map("n", "<C-q>", "<C-a>", { desc = "Increment number under cursor" })
+
+-- map <leader>/ to <cmd>Telescope current_buffer_fuzzy_find<cr>
+map("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Telescope current buffer fuzzy find" })
