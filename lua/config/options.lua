@@ -8,3 +8,4 @@ local opt = vim.opt
 vim.g.root_spec = {}
 opt.autochdir = false
 opt.wrap = true
+opt.scrolloff = 10
