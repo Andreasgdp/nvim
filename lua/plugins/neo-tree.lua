@@ -17,5 +17,6 @@ return {
       },
     },
     hijack_netrw_behavior = "open_current",
+    buffers = { follow_current_file = { enabled = true } },
   },
 }

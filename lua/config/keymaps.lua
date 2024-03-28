@@ -69,3 +69,6 @@ map("n", "<C-q>", "<C-a>", { desc = "Increment number under cursor" })
 
 -- map <leader>/ to <cmd>Telescope current_buffer_fuzzy_find<cr>
 map("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Telescope current buffer fuzzy find" })
+
+-- make sure neo-tree reveals the current file
+map("n", "<leader>e", ":Neotree filesystem reveal toggle<CR>", { desc = "Explorer NeoTree (Root Dir)", remap = true })
