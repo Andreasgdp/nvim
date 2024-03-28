@@ -4,7 +4,7 @@ return {
   opts = {
     window = {
       close_if_last_window = true,
-      position = "right",
+      position = "current",
       width = 60,
     },
     event_handlers = {
@@ -16,5 +16,6 @@ return {
         end,
       },
     },
+    hijack_netrw_behavior = "open_current",
   },
 }
