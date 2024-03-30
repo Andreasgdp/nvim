@@ -9,3 +9,12 @@ vim.g.root_spec = {}
 opt.autochdir = false
 opt.wrap = true
 opt.scrolloff = 10
+
+opt.smarttab = true
+opt.breakindent = true
+opt.shiftwidth = 4
+opt.tabstop = 4
+
+opt.backspace = { "indent", "eol", "start" }
+opt.path:append("**")
+opt.wildignore:append("*/node_modules/*")
