@@ -6,7 +6,7 @@ return {
     },
     pickers = {
       live_grep = {
-        file_ignore_patterns = { "node_modules", ".git", ".venv", ".env", ".cache" },
+        file_ignore_patterns = { "node_modules", ".git", ".venv", ".env", ".cache", "-lock.json" },
         additional_args = function(_)
           return { "--hidden" }
         end,
