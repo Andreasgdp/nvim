@@ -1,11 +1,40 @@
 -- TODO: setup keymaps https://github.com/ThePrimeagen/refactoring.nvim
 return {
-  "ThePrimeagen/refactoring.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
+  -- Incremental rename
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    keys = {
+      {
+        "<leader>rn",
+        function()
+          return ":IncRename " .. vim.fn.expand("<cword>")
+        end,
+        desc = "Incremental rename",
+        mode = "n",
+        noremap = true,
+        expr = true,
+      },
+    },
+    config = true,
   },
-  config = function()
-    require("refactoring").setup()
-  end,
+  -- Refactoring tool
+  {
+    "ThePrimeagen/refactoring.nvim",
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("refactoring").select_refactor({
+            show_success_message = true,
+          })
+        end,
+        mode = "v",
+        noremap = true,
+        silent = true,
+        expr = false,
+      },
+    },
+    opts = {},
+  },
 }
