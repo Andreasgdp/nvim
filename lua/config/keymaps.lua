@@ -72,3 +72,13 @@ map("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "
 
 -- make sure neo-tree reveals the current file
 map("n", "<leader>e", ":Neotree filesystem reveal toggle<CR>", { desc = "Explorer NeoTree (Root Dir)", remap = true })
+
+local ts_builtin = require("telescope.builtin")
+local ts_utils = require("telescope.utils")
+
+-- telescope find files in project
+map("n", "<leader>ff", ts_builtin.find_files, { desc = "Telescope Find Files", noremap = true })
+-- telescope find files in cwd
+map("n", "<leader>fF", function()
+  ts_builtin.find_files({ cwd = ts_utils.buffer_dir() })
+end, { desc = "Telescope Find Files in CWD", noremap = true })
