@@ -12,8 +12,8 @@ opt.scrolloff = 15
 
 opt.smarttab = true
 opt.breakindent = true
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.shiftwidth = 2
+opt.tabstop = 2
 
 opt.backspace = { "indent", "eol", "start" }
 opt.path:append("**")
