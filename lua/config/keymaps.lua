@@ -82,3 +82,5 @@ map("n", "<leader>ff", ts_builtin.find_files, { desc = "Telescope Find Files", n
 map("n", "<leader>fF", function()
   ts_builtin.find_files({ cwd = ts_utils.buffer_dir() })
 end, { desc = "Telescope Find Files in CWD", noremap = true })
+
+map("n", "<leader>c", "<C-W>c", { desc = "Close window", noremap = true })
