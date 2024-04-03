@@ -8,7 +8,7 @@ local opt = vim.opt
 vim.g.root_spec = {}
 opt.autochdir = false
 opt.wrap = true
-opt.scrolloff = 15
+opt.scrolloff = 8
 
 opt.smarttab = true
 opt.breakindent = true
