@@ -21,3 +21,12 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
     end, 100)
   end,
 })
+
+-- when opening vim, disable copilot suggestions i.e. "Copilot disable"
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function()
+    vim.defer_fn(function()
+      vim.cmd("Copilot disable")
+    end, 100)
+  end,
+})
