@@ -50,6 +50,9 @@ return {
       timeout = 5000,
       background_colour = "#000000",
       render = "wrapped-compact",
+      top_down = false,
+      stages = "fade_in_slide_out",
+      fps = 60,
     },
   },
 
