@@ -48,11 +48,6 @@ map("n", "<leader>gd", function()
 end, { silent = true, noremap = true, desc = "Neogit Diff" })
 -- ---------GIT---------
 
--- vim.keymap.set("i", "<C-e>", 'copilot#Accept("\\<CR>")', {
---   expr = true,
---   replace_keycodes = false,
--- })
--- vim.g.copilot_no_tab_map = true
 vim.keymap.del("i", "<Tab>")
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
