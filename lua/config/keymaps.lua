@@ -53,6 +53,9 @@ vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-H>", "copilot#Previous()", { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-K>", "copilot#Next()", { silent = true, expr = true })
+-- enable/disable copilot 'Copilot enable'
+map("n", "<leader>cpe", ":Copilot enable<CR>", { desc = "Copilot enable" })
+map("n", "<leader>cpd", ":Copilot disable<CR>", { desc = "Copilot enable" })
 
 -- Make Ctrl+C equivalent to Esc in insert mode (https://vi.stackexchange.com/a/25765)
 map("i", "<C-c>", "<Esc>", { desc = "Ctrl+C to Esc" })
