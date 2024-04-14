@@ -12,21 +12,11 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
   end,
 })
 
--- When going into normal mode from insert mode, run copilot#Dismiss()
-vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-  callback = function()
-    -- dismiss any copilot suggestions when leaving insert mode
-    vim.defer_fn(function()
-      vim.cmd("call copilot#Dismiss()")
-    end, 100)
-  end,
-})
-
 -- when opening vim, disable copilot suggestions i.e. "Copilot disable"
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
   callback = function()
     vim.defer_fn(function()
       vim.cmd("Copilot disable")
-    end, 100)
+    end, 3000)
   end,
 })
