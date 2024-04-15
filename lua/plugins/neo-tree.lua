@@ -4,7 +4,7 @@ return {
   keys = {
     {
       "<leader>e",
-      ":Neotree filesystem reveal toggle<CR>",
+      ":Neotree reveal toggle<CR>",
       { desc = "Explorer NeoTree current file (Root Dir)", remap = true },
     },
   },
