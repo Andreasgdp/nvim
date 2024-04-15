@@ -50,12 +50,9 @@ end, { silent = true, noremap = true, desc = "Neogit Diff" })
 
 vim.keymap.del("i", "<Tab>")
 vim.g.copilot_no_tab_map = true
-vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-vim.api.nvim_set_keymap("i", "<C-H>", "copilot#Previous()", { silent = true, expr = true })
-vim.api.nvim_set_keymap("i", "<C-K>", "copilot#Next()", { silent = true, expr = true })
 -- enable/disable copilot 'Copilot enable'
 map("n", "<leader>cp", function()
-  if vim.g.copilot_enabled then
+  if require("copilot.client").buf_is_attached(0) then
     vim.cmd("Copilot disable")
   else
     vim.cmd("Copilot enable")
