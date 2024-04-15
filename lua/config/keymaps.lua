@@ -52,10 +52,10 @@ vim.keymap.del("i", "<Tab>")
 vim.g.copilot_no_tab_map = true
 -- enable/disable copilot 'Copilot enable'
 map("n", "<leader>cp", function()
-  if require("copilot.client").buf_is_attached(0) then
-    vim.cmd("Copilot disable")
-  else
+  if require("copilot.client").is_disabled() then
     vim.cmd("Copilot enable")
+  else
+    vim.cmd("Copilot disable")
   end
 end, { desc = "Copilot toggle" })
 
