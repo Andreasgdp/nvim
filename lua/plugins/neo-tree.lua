@@ -4,7 +4,9 @@ return {
   keys = {
     {
       "<leader>e",
-      ":Neotree reveal toggle<CR>",
+      function()
+        require("neo-tree.command").execute({ toggle = true, reveal = true })
+      end,
       { desc = "Explorer NeoTree current file (Root Dir)", remap = true },
     },
   },
