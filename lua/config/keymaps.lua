@@ -84,3 +84,9 @@ map("n", "<leader>ff", ts_builtin.find_files, { desc = "Telescope Find Files", n
 map("n", "<leader>fF", function()
   ts_builtin.find_files({ cwd = ts_utils.buffer_dir() })
 end, { desc = "Telescope Find Files in CWD", noremap = true })
+
+local apm = require("vim-apm")
+apm:setup({})
+vim.keymap.set("n", "<leader>apm", function()
+  apm:toggle_monitor()
+end, { desc = "APM toggle monitor" })
