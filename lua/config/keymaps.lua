@@ -27,17 +27,17 @@ map("n", "<leader>g<leader>", ":Git ", { desc = "Git" })
 local neogit = require("neogit")
 
 -- status
-map("n", "<leader>gs", neogit.open, { silent = true, noremap = true, desc = "Neogit Status" })
+map("n", "<leader>gs", neogit.open, { silent = true, remap = true, desc = "Neogit Status" })
 -- commit
-map("n", "<leader>gc", ":Neogit commit<CR>", { silent = true, noremap = true, desc = "Neogit Commit" })
+map("n", "<leader>gc", ":Neogit commit<CR>", { silent = true, remap = true, desc = "Neogit Commit" })
 -- pull
-map("n", "<leader>gp", ":Neogit pull<CR>", { silent = true, noremap = true, desc = "Neogit Pull" })
+map("n", "<leader>gp", ":Neogit pull<CR>", { silent = true, remap = true, desc = "Neogit Pull" })
 -- push
-map("n", "<leader>gP", ":Neogit push<CR>", { silent = true, noremap = true, desc = "Neogit Push" })
+map("n", "<leader>gP", ":Neogit push<CR>", { silent = true, remap = true, desc = "Neogit Push" })
 -- branches
-map("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true, noremap = true, desc = "Search branches" })
+map("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true, remap = true, desc = "Search branches" })
 -- blame
-map("n", "<leader>gB", ":G blame<CR>", { silent = true, noremap = true, desc = "Neogit Blame" })
+map("n", "<leader>gB", ":G blame<CR>", { silent = true, remap = true, desc = "Neogit Blame" })
 -- diffview toggle (:DiffviewOpen, :DiffviewClose depending on state)
 map("n", "<leader>gd", function()
   if next(require("diffview.lib").views) == nil then
@@ -45,7 +45,7 @@ map("n", "<leader>gd", function()
   else
     vim.cmd("DiffviewClose")
   end
-end, { silent = true, noremap = true, desc = "Neogit Diff" })
+end, { silent = true, remap = true, desc = "Neogit Diff" })
 -- ---------GIT---------
 
 vim.keymap.del("i", "<Tab>")
@@ -67,7 +67,7 @@ map("n", "<A-S-k>", ":t .-1<CR>", { desc = "Copy line up" })
 
 -- enable ctrl+backspace to delete word in insert mode (NOTE: <C-BS> maybe only work on vim gui apps... if you use vim terminal, <C-BS> normally don't work.)
 -- https://www.reddit.com/r/neovim/comments/okbag3/comment/h57auji/?utm_source=share&utm_medium=web2x&context=3
-map("i", "<C-H>", "<C-w>", { desc = "Ctrl+Backspace to delete word", silent = true, noremap = true })
+map("i", "<C-H>", "<C-w>", { desc = "Ctrl+Backspace to delete word", silent = true, remap = true })
 
 -- map ctrl+q to increment number under cursor as ctrl+a is mapped in tmux as prefix
 map("n", "<C-q>", "<C-a>", { desc = "Increment number under cursor" })
@@ -79,11 +79,11 @@ local ts_builtin = require("telescope.builtin")
 local ts_utils = require("telescope.utils")
 
 -- telescope find files in project
-map("n", "<leader>ff", ts_builtin.find_files, { desc = "Telescope Find Files", noremap = true })
+map("n", "<leader>ff", ts_builtin.find_files, { desc = "Telescope Find Files", remap = true })
 -- telescope find files in cwd
 map("n", "<leader>fF", function()
   ts_builtin.find_files({ cwd = ts_utils.buffer_dir() })
-end, { desc = "Telescope Find Files in CWD", noremap = true })
+end, { desc = "Telescope Find Files in CWD", remap = true })
 
 local apm = require("vim-apm")
 apm:setup({})

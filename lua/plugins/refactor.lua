@@ -12,7 +12,7 @@ return {
         end,
         desc = "Incremental rename",
         mode = "n",
-        noremap = true,
+        remap = true,
         expr = true,
       },
     },
@@ -30,7 +30,7 @@ return {
           })
         end,
         mode = "v",
-        noremap = true,
+        remap = true,
         silent = true,
         expr = false,
       },
