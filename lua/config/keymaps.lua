@@ -90,9 +90,3 @@ apm:setup({})
 vim.keymap.set("n", "<leader>apm", function()
   apm:toggle_monitor()
 end, { desc = "APM toggle monitor" })
-
--- save all files with ctrl+s for all modes
-map("n", "<C-s>", ":wa<CR>", { desc = "Save all files" })
-map("v", "<C-s>", "<Esc>:wa<CR>", { desc = "Save all files" })
-map("i", "<C-s>", "<Esc>:wa<CR>", { desc = "Save all files" })
-map("x", "<C-s>", "<C-c>:wa<CR>", { desc = "Save all files" })
