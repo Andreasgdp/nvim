@@ -59,6 +59,10 @@ map("n", "<leader>cp", function()
   end
 end, { desc = "Copilot toggle" })
 
+map("n", "<leader>cP", function()
+  vim.cmd("Copilot enable")
+end, { desc = "Copilot enable" })
+
 -- Make Ctrl+C equivalent to Esc in insert mode (https://vi.stackexchange.com/a/25765)
 map("i", "<C-c>", "<Esc>", { desc = "Ctrl+C to Esc" })
 
