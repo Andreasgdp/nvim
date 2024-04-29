@@ -28,6 +28,7 @@ local neogit = require("neogit")
 
 -- status
 map("n", "<leader>gs", neogit.open, { silent = true, remap = true, desc = "Neogit Status" })
+map("n", "<leader>gl", neogit.open, { silent = true, remap = true, desc = "Neogit Status" })
 -- commit
 map("n", "<leader>gc", ":Neogit commit<CR>", { silent = true, remap = true, desc = "Neogit Commit" })
 -- pull
