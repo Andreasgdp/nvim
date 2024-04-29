@@ -8,9 +8,11 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
+    -- TODO: the addition of lazyvim and it's extras below is what needs to be removed
+    -- at some point to be decoupled from the nvim framework and have my own personal setup
+
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
