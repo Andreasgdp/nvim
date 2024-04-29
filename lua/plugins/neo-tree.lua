@@ -1,4 +1,3 @@
--- TODO: do not close folders automatically (add a shortcut for this instead)
 return {
   "nvim-neo-tree/neo-tree.nvim",
   keys = {
