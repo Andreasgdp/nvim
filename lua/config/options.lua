@@ -18,3 +18,6 @@ opt.tabstop = 2
 opt.backspace = { "indent", "eol", "start" }
 opt.path:append("**")
 opt.wildignore:append("*/node_modules/*")
+
+-- disable format on save can format using cf or cF
+vim.g.autoformat = false
