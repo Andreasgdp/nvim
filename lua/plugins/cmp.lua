@@ -85,6 +85,12 @@ return {
       end
       local cmp = require("cmp")
 
+      opts = vim.tbl_deep_extend("force", opts, {
+        mapping = vim.tbl_deep_extend("force", {
+          ["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+        }, opts.mapping),
+      })
+
       cmp.setup(opts)
     end,
   },
