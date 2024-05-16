@@ -88,6 +88,10 @@ return {
       opts = vim.tbl_deep_extend("force", opts, {
         mapping = vim.tbl_deep_extend("force", {
           ["<C-i>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+          ["<C-e>"] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close(),
+          }),
         }, opts.mapping),
       })
 
