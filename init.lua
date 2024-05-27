@@ -1,4 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.cmd("Copilot disable")
+-- TODO: figure out what behaviour I like best: default on or off
+-- vim.cmd("Copilot disable")
