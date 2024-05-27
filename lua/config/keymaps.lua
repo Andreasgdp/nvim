@@ -104,3 +104,8 @@ map("n", "<leader>wl", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wl", "<C-W>v", { desc = "Split Window Left", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+
+-- remove all marks
+map("n", "<leader>mm", ":delmarks a-z<CR>", { desc = "Delete all marks" })
+-- remove all marks for alphanumeric characters and special characters
+map("n", "<leader>ma", ":delm! | delm A-Z0-9<CR>", { desc = "Delete all marks for alphanumeric characters" })
