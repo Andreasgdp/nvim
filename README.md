@@ -1,3 +1,5 @@
+# The setup has been moved to being part of dotfiles from: https://github.com/Andreasgdp/dotfiles/commit/4a1e013caff526863eb6f4a2a1cbb2cfc8345388
+
 # NeoVim setup
 
 This is my neovim setup. I use it for web development, so it's optimized for that.
